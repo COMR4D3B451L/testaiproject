@@ -6,4 +6,4 @@ class ChatLog(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.input_text} - {self.answer_text}"
+        return f"{self.id} - {self.input_text}"
