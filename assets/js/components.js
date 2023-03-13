@@ -3,11 +3,21 @@ function globalMethods() {
       enterLine(text) {
         const chatBody = document.getElementById("response-box")
         const newElement = document.createElement("span");
-        const br = document.createElement("br");
 
-        newElement.innerHTML = `<span class='text-red-700'>You:</span> ${text}`;
+        newElement.innerHTML = `You: ${text}`;
+        newElement.classList.add('bg-slate-100', 'py-2', 'rounded-xl', 'mb-2', 'px-4', 'flex');
         chatBody.appendChild(newElement);
-        chatBody.appendChild(br);
+      },
+      focusInput(el) {
+        el.focus();
+        document.addEventListener('htmx:afterSwap', function (event) {
+          el.value = '';
+        });
+      },
+      scrollToBottom(el) {
+        document.addEventListener('htmx:afterSwap', function (event) {
+          el.scrollTop = el.scrollHeight;
+        });
       },
     };
   }
