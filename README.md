@@ -15,3 +15,6 @@ You can use this django project to to play around with OpenAI API.
   "SECRET_KEY": "XXXX",
   "OPEN_AI_API_KEY": "XXXX"
 }`
+
+Preview image:
+![Chatbot](https://cdn.discordapp.com/attachments/1027506851329355807/1084986126084874300/image.png)
